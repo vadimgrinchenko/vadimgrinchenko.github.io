@@ -1,53 +1,124 @@
 html {
-    --text: rgb(255, 255, 255);
-    --primary: rgb(40, 63, 114);
-    --secondary: rgb(91, 58, 112);
-    --accent: rgb(123, 56, 129);
-}
-body{
-  font-family: "UnifrakturMaguntia";
+  --text: rgb(255, 255, 255);
+  --primary: rgb(40, 63, 114);
+  --secondary: rgb(91, 58, 112);
+  --accent: rgb(123, 56, 129);
 }
 
-h1 {color: var(--accent);
+* {
+  border: 10px dashed;
+  filter: invert(100%)
 }
-h2 {color: var(--secondary);
+
+body {
+  font-family: "UnifrakturMaguntia";
+  font-weight: 200;
+  text-decoration: underline;
+  text-decoration: underline overline;
 }
-h3 {color: var(--primary);
+
+h1 {
+  color: var(--accent);
+  font-weight: 200;
+}
+
+h2 {
+  color: var(--secondary);
+  font-weight: 200;
+}
+
+h3 {
+  color: var(--primary);
+  font-weight: 200;
 }
 
 body {
   animation-name: color-change;
-  animation-duration: 1s; 
+  animation-duration: 0.75s;
   animation-iteration-count: infinite;
-  animation-direction: alternate; 
+  animation-direction: alternate;
 }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  animation-name: color-change;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 a:link {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
 }
 
 a:visited {
-    color: rgb(129, 129, 129);
-    text-decoration: underline;
+  color: rgb(129, 129, 129);
+  text-decoration: underline;
 }
-p:hover {
-  color: red;
-}
-h1:hover {
-  color:red
-}
-h2:hover {
-  color:red
-}
-h3:hover {
-  color:red
-}
-@keyframes color-change {
-  0% { background-color: #726f85; } 
-  100% { background-color: #998e9e; }
-}
-  img{
-    padding: 2px;
-    border: 2px;
 
+p:hover {
+  filter: invert(100%);
+}
+
+h1:hover {
+  filter: invert(100%);
+}
+
+h2:hover {
+  filter: invert(100%);
+}
+
+h3:hover {
+  filter: invert(100%);
+}
+
+@keyframes color-change {
+  0% {
+    background-color: #726f85;
   }
+
+  100% {
+    background-color: #998e9e;
+  }
+}
+
+img {
+  padding: 2px;
+  border: 2px;
+
+}
+
+li:hover {
+  filter: invert(100%)
+}
+ h1,h2,h3,h4,p{ 
+border-style: dotted;
+  border-width: 10px;
+  display: block;
+  background-color: blue;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    rotate 50s;
+}
+h1:hover{
+  rotate: 18000turn;
+  width:100px;
+ }
+h2:hover{
+  rotate: 18000turn;
+  width: 100px;
+}
+h3:hover{
+  rotate: 18000turn;
+  width: 100px;
+}
+h4:hover{
+  rotate: 18000turn;
+  width: 100px;
+} */
