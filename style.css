@@ -5,16 +5,13 @@ html {
   --accent: rgb(123, 56, 129);
 }
 
-* {
-  border: 10px dashed;
-  filter: invert(100%)
+p {
+  border: 1px solid;
 }
 
 body {
   font-family: "UnifrakturMaguntia";
   font-weight: 200;
-  text-decoration: underline;
-  text-decoration: underline overline;
 }
 
 h1 {
@@ -34,46 +31,19 @@ h3 {
 
 body {
   animation-name: color-change;
-  animation-duration: 0.75s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  animation-name: color-change;
-  animation-duration: 0.5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 a:link {
-  color: rgb(0, 0, 0);
+  color: rgb(97, 214, 250);
   text-decoration: underline;
 }
 
 a:visited {
   color: rgb(129, 129, 129);
   text-decoration: underline;
-}
-
-p:hover {
-  filter: invert(100%);
-}
-
-h1:hover {
-  filter: invert(100%);
-}
-
-h2:hover {
-  filter: invert(100%);
-}
-
-h3:hover {
-  filter: invert(100%);
 }
 
 @keyframes color-change {
@@ -85,40 +55,3 @@ h3:hover {
     background-color: #998e9e;
   }
 }
-
-img {
-  padding: 2px;
-  border: 2px;
-
-}
-
-li:hover {
-  filter: invert(100%)
-}
- h1,h2,h3,h4,p{ 
-border-style: dotted;
-  border-width: 10px;
-  display: block;
-  background-color: blue;
-  transition:
-    width 2s,
-    height 2s,
-    background-color 2s,
-    rotate 50s;
-}
-h1:hover{
-  rotate: 18000turn;
-  width:100px;
- }
-h2:hover{
-  rotate: 18000turn;
-  width: 100px;
-}
-h3:hover{
-  rotate: 18000turn;
-  width: 100px;
-}
-h4:hover{
-  rotate: 18000turn;
-  width: 100px;
-} */
