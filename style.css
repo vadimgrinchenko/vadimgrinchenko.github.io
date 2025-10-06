@@ -4,7 +4,14 @@ html {
   --secondary: rgb(91, 58, 112);
   --accent: rgb(123, 56, 129);
 }
-
+p{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: BoxOfDoom;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
 div{
   width: 100px;
   height: 100px;
