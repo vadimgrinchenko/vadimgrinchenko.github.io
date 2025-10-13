@@ -4,30 +4,91 @@ html {
   --secondary: rgb(91, 58, 112);
   --accent: rgb(123, 56, 129);
 }
-p{
+.floatbox{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: floatbox;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  color: white
+}
+.boxbiggest-0{
   width: 100px;
   height: 100px;
   position: relative;
   animation-name: BoxOfDoom;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+.boxbiggest-01{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: BoxOfDoom;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+.boxbiggest-1{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: BoxOfDoom-1;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+}
+.boxbiggest-11{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: BoxOfDoom-1;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
-div{
+.boxbiggest-2{
   width: 100px;
   height: 100px;
   position: relative;
-  animation-name: BoxOfDoom;
-  animation-duration: 0.5s;
+  animation-name: BoxOfDoom-2;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+.boxbiggest-21{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: BoxOfDoom-2;
+  animation-duration: 0.6s;
   animation-iteration-count: infinite;
 }
 @keyframes BoxOfDoom{
-  0% {background-color:rgb(255, 0, 0); left:0px; top:0px;}
-  25% {background-color:rgb(255, 208, 0); left:100px; top:0px;}
-  50% {background-color:rgb(0, 110, 255); left:100px; top:100px;}
-  75% {background-color:rgb(0, 17, 255); left:0px; top:100px;}
-  100% {background-color:rgb(153, 0, 255); left:0px; top:0px;}
+  100% {background-color:rgb(255, 0, 0); left:0px; top:0px;}
+  75% {background-color:rgb(255, 208, 0); left: 600px; top:0px;}
+  50% {background-color:rgb(0, 110, 255); left:600px; top:600px;}
+  25% {background-color:rgb(0, 17, 255); left:0px; top:600px;}
+  00% {background-color:rgb(153, 0, 255); left:0px; top:0px;}
 }
-
+@keyframes BoxOfDoom-1{
+  0% {background-color:rgb(255, 0, 0); left:100px; top:00px;}
+  25% {background-color:rgb(255, 208, 0); left:500px; top:00px;}
+  50% {background-color:rgb(0, 110, 255); left:500px; top:400px;}
+  75% {background-color:rgb(0, 17, 255); left:100px; top:400px;}
+  100% {background-color:rgb(153, 0, 255); left:100px; top:00px;}
+}
+@keyframes BoxOfDoom-2{
+  100% {background-color:rgb(255, 0, 0); left:200px; top:-100px;}
+  75% {background-color:rgb(255, 208, 0); left:400px; top:-100px;}
+  50% {background-color:rgb(0, 110, 255); left:400px; top:200px;}
+  25% {background-color:rgb(0, 17, 255); left:200px; top:200px;}
+  0% {background-color:rgb(153, 0, 255); left:200px; top:0px;}
+}
+@keyframes floatbox{
+  100% {background-color:rgb(255, 0, 0); left:0px; top:-0px;}
+  75% {background-color:rgb(255, 208, 0); left:0px; top:0px;}
+  50% {background-color:rgb(0, 110, 255); left:0px; top:0px;}
+  25% {background-color:rgb(0, 17, 255); left:0px; top:0px;}
+  0% {background-color:rgb(153, 0, 255); left:0px; top:0px;}
+}
 p {
   border: 1px solid;
 }
