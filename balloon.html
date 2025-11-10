@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css"> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+</head>
+<a href="index.html">HOME</a>
+<p> 
+    try arrow keys
+</p>
+<body>
+    <p id=Paragraph>🎈</p>
+
+    <script>
+        let font = 10
+        const Paragraph = document.getElementById("Paragraph");
+        window.addEventListener("keydown", event => {
+            if (event.key == "ArrowUp") {
+                font = font * 1.1
+                console.log(font);
+                Paragraph.style.fontSize = font + "px";
+                event.preventDefault();
+            }
+            if (event.key == "ArrowDown") {
+                font = font * 0.9
+                console.log(font);
+                Paragraph.style.fontSize = font + "px";
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>

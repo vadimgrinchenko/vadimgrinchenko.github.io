@@ -12,8 +12,10 @@ html {
   animation-name: floatbox;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
   color: white;
   z-index: 1000;
+  transform: scale(3, 3)
 }
 
 .boxbiggest-0 {
@@ -175,8 +177,8 @@ html {
 
   100% {
     backdrop-filter: invert(1);
-    left: 0px;
-    top: 0px;
+    left: 500px;
+    top: 500px;
   }
 }
 
@@ -217,7 +219,7 @@ a:link {
 }
 
 a:visited {
-  color: rgb(129, 129, 129);
+  color: rgb(0, 89, 255);
   text-decoration: underline;
 }
 
