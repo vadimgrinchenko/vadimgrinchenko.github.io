@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<body>
+    <a href="index.html">home page</a>
+</body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,9 +84,10 @@
 
         btnGreet.addEventListener("click", () => {
             if (ageInput.value >= 13){
-                greetingOutput.innerText = "hey" + nameInput.value +", you're" + ageInput.value +"years old!";
+                greetingOutput.innerText = "hey " + nameInput.value +", you're " + ageInput.value +" years old!";
+            } else if (ageInput.value < 13){
+                greetingOutput.innerText = "Get out of here, child."
             }
-            // Challenge: If age < 13, show "You're just a kid!" instead.
         });
 
         // --- PART 2 ---
@@ -92,7 +95,12 @@
         const volumeInput = document.getElementById("volumeInput");
         const colorOutput = document.getElementById("colorOutput");
 
-        // TODO: Update the background color of colorOutput whenever the color input changes.
+        document.body.style.backgroundColor = colorInput.value
+        colorInput.addEventListener("input", () => {
+            document.body.style.backgroundColor = colorInput.value;
+            colorOutput.innertext = "Hex:" + colorInput.value + "volume:" + volumeInput.value;
+        });
+        
         // Challenge: Also display the hex code and volume value dynamically.
 
         // --- PART 3 ---
