@@ -94,12 +94,12 @@
         const colorInput = document.getElementById("colorInput");
         const volumeInput = document.getElementById("volumeInput");
         const colorOutput = document.getElementById("colorOutput");
-
-        document.body.style.backgroundColor = colorInput.value
+        
         colorInput.addEventListener("input", () => {
             document.body.style.backgroundColor = colorInput.value;
-            colorOutput.innertext = "Hex:" + colorInput.value + "volume:" + volumeInput.value;
-        });
+            colorOutput.innerText = "volume=" + volumeInput.value + " and color= " + colorInput.value
+            colorOutput.style.backgroundColor = "white"
+            });
         
         // Challenge: Also display the hex code and volume value dynamically.
 
@@ -109,6 +109,7 @@
         const modeOutput = document.getElementById("modeOutput");
 
         btnSubmit.addEventListener("click", () => {
+
             // TODO: Find which radio button is checked and display it.
             // Challenge: Include whether the user subscribed or not.
         });
