@@ -9,10 +9,30 @@
     
 </body>
 </html>
-
+<a href="index.html">home page lol</a>
 <html>
-    <div id="changingimage"></div>
+    <div id="changingimage">
+        <img id="theimage" src="11.png" height="700">
+    </div>
 </html>
 <script>
-    function 
+    const changingimage = document.getElementById("changingimage")
+    const theimage = document.getElementById("theimage")
+    let imageframe = 1
+    changingimage.addEventListener("click", () => {
+        imageframe = imageframe + 1
+        console.log(imageframe)
+        if (imageframe == 4){
+            imageframe = 1;
+        }
+        if (imageframe == 1){
+            theimage.src = "11.png"
+        }
+        if (imageframe == 2){
+            theimage.src = "12.png"
+        }
+        if (imageframe == 3){
+            theimage.src = "13.png"
+        }
+    })
 </script>
