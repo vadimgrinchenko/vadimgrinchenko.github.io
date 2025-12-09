@@ -1,8 +1,19 @@
 html {
   --text: rgb(255, 255, 255);
-  --primary: rgb(40, 63, 114);
-  --secondary: rgb(91, 58, 112);
-  --accent: rgb(123, 56, 129);
+  --primary: rgb(0, 81, 255);
+  --secondary: rgb(157, 0, 255);
+  --accent: rgb(255, 255, 255);
+}
+
+button {
+  background-color: #c1c7ff; /* Green */
+  color: rgb(0, 0, 0);
+  padding: 0px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
 }
 
 .floatbox {
@@ -187,7 +198,7 @@ p {
 }
 
 body {
-  font-family: "UnifrakturMaguntia";
+  font-family: "raleway";
   font-weight: 200;
 }
 
