@@ -1,19 +1,17 @@
 html {
   --text: rgb(255, 255, 255);
-  --primary: rgb(0, 81, 255);
-  --secondary: rgb(157, 0, 255);
+  --primary: rgb(106, 255, 0);
+  --secondary: rgb(0, 255, 136);
   --accent: rgb(255, 255, 255);
 }
 
 button {
-  background-color: #c1c7ff; /* Green */
+  background-color: #caffc1; 
   color: rgb(0, 0, 0);
-  padding: 0px 32px;
+  padding: 10px 5px;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border: none;
-  border-radius: 8px;
 }
 
 .floatbox {
@@ -236,10 +234,10 @@ a:visited {
 
 @keyframes color-change {
   0% {
-    background-color: #726f85;
+    background-color: rgb(255, 217, 0);
   }
 
   100% {
-    background-color: #998e9e;
+    background-color: rgb(228, 197, 0);
   }
 }
