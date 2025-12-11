@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
-    <a href="index.html">home page</a>
-</body>
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: sans-serif;
-            max-width: 600px;
+            max-width: 800px;
             margin: 2rem auto;
         }
 
@@ -33,6 +33,39 @@
         }
     </style>
 </head>
+<div class=searchbar>
+    <a href="index.html"><button><b>HOME PAGE</b></button></a>
+
+    <a href="class_links.html"><button> <b>Class</b> Links :D</button></a>
+
+    <a href="balloon.html"><button> The <b>Balloon</b> Game</button> </a>
+
+    <a href="insertelementschallenge.html"><button><b>Input </b>Challenge</button></a>
+
+    <a href="widgetchallenge.html"><button><b>widget</b> challenge</button></a>
+</div>
+<style>
+    button {
+        background-color: #919191;
+        color: rgb(0, 0, 0);
+        padding: 10px 5px;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .searchbar {
+        background-color: rgb(65, 65, 65);
+        border-radius: 5px;
+        padding: 15px 5px;
+        margin: 1px;
+    }
+</style>
+<style>
+    body {
+        background-color: aqua
+    }
+</style>
 
 <body>
     <h1>Input Element Challenge</h1>
@@ -83,9 +116,9 @@
         const greetingOutput = document.getElementById("greetingOutput");
 
         btnGreet.addEventListener("click", () => {
-            if (ageInput.value >= 13){
-                greetingOutput.innerText = "hey " + nameInput.value +", you're " + ageInput.value +" years old!";
-            } else if (ageInput.value < 13){
+            if (ageInput.value >= 13) {
+                greetingOutput.innerText = "hey " + nameInput.value + ", you're " + ageInput.value + " years old!";
+            } else if (ageInput.value < 13) {
                 greetingOutput.innerText = "Get out of here, child."
             }
         });
@@ -94,13 +127,13 @@
         const colorInput = document.getElementById("colorInput");
         const volumeInput = document.getElementById("volumeInput");
         const colorOutput = document.getElementById("colorOutput");
-        
+
         colorInput.addEventListener("input", () => {
             document.body.style.backgroundColor = colorInput.value;
             colorOutput.innerText = "volume=" + volumeInput.value + " and color= " + colorInput.value
             colorOutput.style.backgroundColor = "white"
-            });
-        
+        });
+
         // Challenge: Also display the hex code and volume value dynamically.
 
         // --- PART 3 ---
