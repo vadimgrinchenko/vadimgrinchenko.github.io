@@ -1,0 +1,27 @@
+.btn {
+  background-color: #c5c5c5;
+  color: rgb(80, 80, 80);
+  padding: 10px 5px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  /* Default button browser styles */
+  align-items: flex-start;
+  text-align: start;
+  cursor: pointer;
+  box-sizing: border-box;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+}
+
+.searchbar {
+  background-color: rgb(65, 65, 65);
+  border-radius: 5px;
+  padding: 15px 5px;
+}

@@ -2,99 +2,85 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="navbar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
+<body>
+    <div class=searchbar>
+        <a class="btn" href="index.html">HOME PAGE</a>
+        <a class="btn" href="class_links.html">Class Links</a>
+        <a class="btn" href="balloon.html">The Balloon Game</a>
+        <a class="btn" href="insertelementschallenge.html">Input Challenge</a>
+        <a class="btn" href="widgetchallenge.html">Widget Challenge</a>
+    </div>
 
-<div class=searchbar>
-    <button href="index.html"><b>HOME PAGE</b></button>
-    <button href="class_links.html"><b>Class</b> Links</button>
-    <button href="balloon.html">The <b>Balloon </b>Game</button>
-    <button href="insertelementschallenge.html"><b>Input</b> Challenge</button>
-    <button href="widgetchallenge.html"><b>Widget</b> Challenge</button>
-</div>
-<style>
-    button {
-        background-color: #919191;
-        color: rgb(0, 0, 0);
-        padding: 10px 5px;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
+    <!-- <a href="index.html">home page lol</a> -->
 
-    .searchbar {
-        background-color: rgb(65, 65, 65);
-        border-radius: 5px;
-        padding: 15px 5px;
-    }
-</style>
-
-<!-- <a href="index.html">home page lol</a> -->
-
-<div id="changingimage">
-    <img id="theimage" src="11.png" height="700">
-</div>
-<div id="theclick"></div>
-<p>
-    Click the image please(many times)
-</p>
-<p>
-    Also click buttons too :D
-</p>
-<style>
-    body {
-        background-color: #FF0000
-    }
-</style>
-<script>
-    const changingimage = document.getElementById("changingimage")
-    const theimage = document.getElementById("theimage")
-    const theclick = document.getElementById("theclick")
-    let imageframe = 1
-    let click = 0
-    changingimage.addEventListener("click", (event) => {
-        click = click + 1
-        imageframe = imageframe + 1
-        console.log(imageframe)
-        if (imageframe == 4) {
-            imageframe = 1;
+    <div id="changingimage">
+        <img id="theimage" src="11.png" height="700">
+    </div>
+    <div id="theclick"></div>
+    <p>
+        Click the image please(many times)
+    </p>
+    <p>
+        Also click buttons too :D
+    </p>
+    <style>
+        body {
+            background-color: #FF0000
         }
-        if (imageframe == 1) {
-            theimage.src = "11.png"
-        }
-        if (imageframe == 2) {
-            theimage.src = "12.png"
-        }
-        if (imageframe == 3) {
-            theimage.src = "13.png"
-        }
-    })
-    changingimage.addEventListener("contextmenu", (e) => {
-        e.preventDefault();
-        imageframe = imageframe - 1
-        click = click - 1
-        console.log(imageframe)
-        if (imageframe == 0) {
-            imageframe = 3;
-        }
-        if (imageframe == 1) {
-            theimage.src = "11.png"
-        }
-        if (imageframe == 2) {
-            theimage.src = "12.png"
-        }
-        if (imageframe == 3) {
-            theimage.src = "13.png"
-        }
-    })
-    document.body.addEventListener("keydown", (event) => {
-        click = click + 1
-        console.log(click)
-        theclick.innerText = click
-    })
-</script>
+    </style>
+    <script>
+        const changingimage = document.getElementById("changingimage")
+        const theimage = document.getElementById("theimage")
+        const theclick = document.getElementById("theclick")
+        let imageframe = 1
+        let click = 0
+        changingimage.addEventListener("click", (event) => {
+            click = click + 1
+            imageframe = imageframe + 1
+            console.log(imageframe)
+            if (imageframe == 4) {
+                imageframe = 1;
+            }
+            if (imageframe == 1) {
+                theimage.src = "11.png"
+            }
+            if (imageframe == 2) {
+                theimage.src = "12.png"
+            }
+            if (imageframe == 3) {
+                theimage.src = "13.png"
+            }
+        })
+        changingimage.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            imageframe = imageframe - 1
+            click = click - 1
+            console.log(imageframe)
+            if (imageframe == 0) {
+                imageframe = 3;
+            }
+            if (imageframe == 1) {
+                theimage.src = "11.png"
+            }
+            if (imageframe == 2) {
+                theimage.src = "12.png"
+            }
+            if (imageframe == 3) {
+                theimage.src = "13.png"
+            }
+        })
+        document.body.addEventListener("keydown", (event) => {
+            click = click + 1
+            console.log(click)
+            theclick.innerText = click
+        })
+    </script>
 
 </html>
+</body>

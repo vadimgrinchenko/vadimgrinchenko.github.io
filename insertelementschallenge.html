@@ -4,6 +4,7 @@
 
 
 <head>
+    <link rel="stylesheet" href="navbar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Element Challenge</title>
@@ -31,116 +32,102 @@
         }
     </style>
 </head>
-<div class=searchbar>
-    <button href="index.html"><b>HOME PAGE</b></button>
-    <button href="class_links.html"><b>Class</b> Links</button>
-    <button href="balloon.html">The <b>Balloon </b>Game</button>
-    <button href="insertelementschallenge.html"><b>Input</b> Challenge</button>
-    <button href="widgetchallenge.html"><b>Widget</b> Challenge</button>
-</div>
-<style>
-    button {
-        background-color: #919191;
-        color: rgb(0, 0, 0);
-        padding: 10px 5px;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-
-    .searchbar {
-        background-color: rgb(65, 65, 65);
-        border-radius: 5px;
-        padding: 15px 5px;
-        margin: 1px;
-    }
-</style>
-<style>
-    body {
-        background-color: aqua
-    }
-</style>
 
 <body>
-    <h1>Input Element Challenge</h1>
+    <div class=searchbar>
+        <a class="btn" href="index.html">HOME PAGE</a>
+        <a class="btn" href="class_links.html">Class Links</a>
+        <a class="btn" href="balloon.html">The Balloon Game</a>
+        <a class="btn" href="insertelementschallenge.html">Input Challenge</a>
+        <a class="btn" href="widgetchallenge.html">Widget Challenge</a>
+    </div>
+    <style>
+        body {
+            background-color: aqua
+        }
+    </style>
 
-    <section id="part1">
-        <h2>Part 1: Text and Number Inputs</h2>
-        <label>
-            Name:
-            <input id="nameInput" type="text" placeholder="Enter your name">
-        </label>
-        <label>
-            Age:
-            <input id="ageInput" type="number" min="0" max="100" placeholder="Age">
-        </label>
-        <button id="btnGreet">Greet Me</button>
-        <div class="output" id="greetingOutput"></div>
-    </section>
+    <body>
+        <h1>Input Element Challenge</h1>
 
-    <section id="part2">
-        <h2>Part 2: Color and Range Inputs</h2>
-        <label>
-            Favorite Color:
-            <input id="colorInput" type="color" value="#00AAFF">
-        </label>
-        <label>
-            Volume:
-            <input id="volumeInput" type="range" min="0" max="100" value="50">
-        </label>
-        <div class="output" id="colorOutput"></div>
-    </section>
+        <section id="part1">
+            <h2>Part 1: Text and Number Inputs</h2>
+            <label>
+                Name:
+                <input id="nameInput" type="text" placeholder="Enter your name">
+            </label>
+            <label>
+                Age:
+                <input id="ageInput" type="number" min="0" max="100" placeholder="Age">
+            </label>
+            <button id="btnGreet">Greet Me</button>
+            <div class="output" id="greetingOutput"></div>
+        </section>
 
-    <section id="part3">
-        <h2>Part 3: Checkbox and Radio Buttons</h2>
-        <label><input type="checkbox" id="subscribeBox"> Subscribe to newsletter</label>
-        <p>Pick a mode:</p>
-        <label><input type="radio" name="mode" value="Light"> Light</label>
-        <label><input type="radio" name="mode" value="Dark"> Dark</label>
-        <label><input type="radio" name="mode" value="System" checked> System</label>
-        <button id="btnSubmit">Submit</button>
-        <div class="output" id="modeOutput"></div>
-    </section>
+        <section id="part2">
+            <h2>Part 2: Color and Range Inputs</h2>
+            <label>
+                Favorite Color:
+                <input id="colorInput" type="color" value="#00AAFF">
+            </label>
+            <label>
+                Volume:
+                <input id="volumeInput" type="range" min="0" max="100" value="50">
+            </label>
+            <div class="output" id="colorOutput"></div>
+        </section>
 
-    <script>
-        // --- PART 1 ---
-        const nameInput = document.getElementById("nameInput");
-        const ageInput = document.getElementById("ageInput");
-        const btnGreet = document.getElementById("btnGreet");
-        const greetingOutput = document.getElementById("greetingOutput");
+        <section id="part3">
+            <h2>Part 3: Checkbox and Radio Buttons</h2>
+            <label><input type="checkbox" id="subscribeBox"> Subscribe to newsletter</label>
+            <p>Pick a mode:</p>
+            <label><input type="radio" name="mode" value="Light"> Light</label>
+            <label><input type="radio" name="mode" value="Dark"> Dark</label>
+            <label><input type="radio" name="mode" value="System" checked> System</label>
+            <button id="btnSubmit">Submit</button>
+            <div class="output" id="modeOutput"></div>
+        </section>
 
-        btnGreet.addEventListener("click", () => {
-            if (ageInput.value >= 13) {
-                greetingOutput.innerText = "hey " + nameInput.value + ", you're " + ageInput.value + " years old!";
-            } else if (ageInput.value < 13) {
-                greetingOutput.innerText = "Get out of here, child."
-            }
-        });
+        <script>
+            // --- PART 1 ---
+            const nameInput = document.getElementById("nameInput");
+            const ageInput = document.getElementById("ageInput");
+            const btnGreet = document.getElementById("btnGreet");
+            const greetingOutput = document.getElementById("greetingOutput");
 
-        // --- PART 2 ---
-        const colorInput = document.getElementById("colorInput");
-        const volumeInput = document.getElementById("volumeInput");
-        const colorOutput = document.getElementById("colorOutput");
+            btnGreet.addEventListener("click", () => {
+                if (ageInput.value >= 13) {
+                    greetingOutput.innerText = "hey " + nameInput.value + ", you're " + ageInput.value + " years old!";
+                } else if (ageInput.value < 13) {
+                    greetingOutput.innerText = "Get out of here, child."
+                }
+            });
 
-        colorInput.addEventListener("input", () => {
-            document.body.style.backgroundColor = colorInput.value;
-            colorOutput.innerText = "volume=" + volumeInput.value + " and color= " + colorInput.value
-            colorOutput.style.backgroundColor = "white"
-        });
+            // --- PART 2 ---
+            const colorInput = document.getElementById("colorInput");
+            const volumeInput = document.getElementById("volumeInput");
+            const colorOutput = document.getElementById("colorOutput");
 
-        // Challenge: Also display the hex code and volume value dynamically.
+            colorInput.addEventListener("input", () => {
+                document.body.style.backgroundColor = colorInput.value;
+                colorOutput.innerText = "volume=" + volumeInput.value + " and color= " + colorInput.value
+                colorOutput.style.backgroundColor = "white"
+            });
 
-        // --- PART 3 ---
-        const subscribeBox = document.getElementById("subscribeBox");
-        const btnSubmit = document.getElementById("btnSubmit");
-        const modeOutput = document.getElementById("modeOutput");
+            // Challenge: Also display the hex code and volume value dynamically.
 
-        btnSubmit.addEventListener("click", () => {
+            // --- PART 3 ---
+            const subscribeBox = document.getElementById("subscribeBox");
+            const btnSubmit = document.getElementById("btnSubmit");
+            const modeOutput = document.getElementById("modeOutput");
 
-            // TODO: Find which radio button is checked and display it.
-            // Challenge: Include whether the user subscribed or not.
-        });
-    </script>
-</body>
+            btnSubmit.addEventListener("click", () => {
+
+                // TODO: Find which radio button is checked and display it.
+                // Challenge: Include whether the user subscribed or not.
+            });
+        </script>
+    </body>
 
 </html>
+</body>
